@@ -21,6 +21,6 @@ print('')
 temp_created_date = created_date[0:5]   # Временная переменная хранится дата создания без отображения года
 temp_issue_date = issue_date[0:5]       # Временная переменная хранится дата дедлайна без отображения года
 
-print('Дата Cоздания заметки в текущем году: ', temp_created_date)
-print('Дата Дедлайна заметки в текущем году: ', temp_issue_date)
+print('Дата Cоздания заметки в текущем году:', temp_created_date)
+print('Дата Дедлайна заметки в текущем году:', temp_issue_date)
 print('')
