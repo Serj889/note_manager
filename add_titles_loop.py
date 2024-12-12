@@ -18,5 +18,5 @@ if len(list_of_titles) == 0:            # Сообщение для пользо
 else:
     print('Заголовки заметки:')
     for i in range(len(list_of_titles)):
-        print(list_of_titles[i])            # Вывод всех заголовков в столбик
+        print('-', list_of_titles[i])            # Вывод всех заголовков в столбик
 print('')
