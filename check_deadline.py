@@ -1,3 +1,7 @@
+# Grade 1. Этап 2: Задание 3
+# Задание: Обработка дедлайнов
+
+
 from datetime import datetime       # Вызов библиотеки datetime
 
 print('')
