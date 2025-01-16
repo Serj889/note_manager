@@ -6,21 +6,22 @@ import json     # Импорт библиотеки JSON
 
 def save_notes_to_json(notes, filename):        # Функция для записи в файл
     # Открытие файла для записи и создание файла при его отсутствии
-    with open(filename, 'w', encoding='utf-8') as file:
+    with open(filename, 'w+', encoding='utf-8') as file:
         # Команда для записи в файл в структуре JSON с наличием кирилицы и отступом каждой строки на 4 пробела
-        j_file = json.dump(notes, file, indent=4, ensure_ascii=False)
+        json.dump(notes, file, indent=4, ensure_ascii=False)
+        file.write('\n')
 
 
 note = []       # Объявление списка в котором будут хранится словари
 add_note = ''   # Начальная позиция цикла
 
-while add_note != 'Нет':    # Выход из цикла добавления записей по слову Нет
+while add_note != 'Нет':            # Выход из цикла добавления записей по слову Нет
     add_note = input('Добавить заметку (да/нет): ').capitalize()
     if add_note == 'Да':            # Заполнение данных от пользователя
-        username = input('Введите имя пользователя: ')
-        title = input('Введите заголовок: ')
-        content = input('Введите описание: ')
-        status = input('Введите статус: ')
+        username = input('Введите имя пользователя: ').capitalize()
+        title = input('Введите заголовок: ').capitalize()
+        content = input('Введите описание: ').capitalize()
+        status = input('Введите статус: ').capitalize()
         created_date = input('Дата создания: ')
         issue_date = input('Дедлайн: ')
 
